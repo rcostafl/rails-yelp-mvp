@@ -1,9 +1,5 @@
 <div class="main-wrapper">
   <div class="container">
-    <%=simple_form_for([@restaurant, @review]) do |f| %>
-      <%= f.input :rating %>
-      <%= f.input :content%>
-      <%= f.button :submit%>
-    <% end %>
+    <%=render('form_review')%>
   </div>
 </div>

@@ -21,10 +21,10 @@
       <h3>
         Reviews
       </h3>
-      <%= link_to('Add a new review', new_restaurant_review_path(@restaurant)) %>
+
       <div>
         <% @restaurant.reviews.each do |review| %>
-          <div>
+          <div class="my-card">
             <p>
               <strong>Rating: </strong>
               <%=review.rating%>
@@ -33,8 +33,11 @@
               <strong>Review: </strong>
               <%=review.content%>
             </p>
-          <div>
+          </div>
         <% end %>
+      </div>
+      <div>
+        <%= render( {partial: 'reviews/form_review'} ) %>
       </div>
     </div>
   </div>
